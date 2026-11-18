@@ -1,0 +1,52 @@
+/* ===== Professional printed document (A4) — shown only when printing / saving as PDF ===== */
+.print-sheet { display: none; }
+@media print {
+  @page { size: A4; margin: 0; }
+  html, body { background: #fff !important; }
+  .content > :not(.print-sheet) { display: none !important; }
+  .print-sheet { display: block; color: #111; font: 10pt/1.35 "Inter", "Segoe UI", Arial, sans-serif; }
+  .print-sheet table { border-collapse: collapse; }
+  .ps-wrap { width: 100%; }
+  .ps-space { height: 11mm; }
+  .ps-body { padding: 0 12mm; position: relative; vertical-align: top; }
+  .ps-small { font-size: 8.5pt; color: #444; }
+  .r { text-align: right; }
+  .ps-letterhead { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding-bottom: 10px; border-bottom: 2.5px solid #a50f2a; }
+  .ps-brand { display: flex; gap: 12px; align-items: center; }
+  .ps-brand img { height: 56px; max-width: 120px; object-fit: contain; }
+  .ps-company { font-size: 16pt; font-weight: 800; color: #1f2430; letter-spacing: .2px; }
+  .ps-title { text-align: right; }
+  .ps-doc-title { font-size: 17pt; font-weight: 800; color: #a50f2a; letter-spacing: 1px; }
+  .ps-boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .ps-box { border: 1px solid #c9ccd3; border-radius: 4px; padding: 8px 10px; }
+  .ps-box-h { font-size: 7.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: #a50f2a; margin-bottom: 4px; }
+  .ps-party { font-size: 11.5pt; font-weight: 700; }
+  .ps-meta td { padding: 1px 10px 1px 0; font-size: 9pt; }
+  .ps-meta td { white-space: nowrap; }
+  .ps-meta td:first-child { color: #555; }
+  .ps-items { width: 100%; font-size: 8.5pt; }
+  .ps-items th { background: #1f2430 !important; color: #fff !important; padding: 5px 5px; text-align: left; font-weight: 600; font-size: 8pt; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .ps-items th.r { text-align: right; }
+  .ps-items td { padding: 4px 5px; border-bottom: 1px solid #d7dae0; vertical-align: top; }
+  .ps-items tbody tr { break-inside: avoid; }
+  .ps-items tbody tr:nth-child(even) td { background: #f6f7f9 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .ps-items tfoot td { border-top: 1.5px solid #1f2430; border-bottom: 1.5px solid #1f2430; padding: 5px; background: #eef0f3 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .ps-summary { display: flex; justify-content: space-between; gap: 18px; margin-top: 12px; break-inside: avoid; }
+  .ps-slabs { flex: 1; }
+  .ps-mini { width: auto; min-width: 70%; }
+  .ps-words { margin-top: 8px; font-size: 9pt; }
+  .ps-totals { width: 215px; font-size: 9.5pt; align-self: flex-start; }
+  .ps-totals td { padding: 3px 6px; border-bottom: 1px solid #d7dae0; }
+  .ps-totals tfoot td { background: #a50f2a !important; color: #fff !important; font-weight: 800; font-size: 11pt; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .ps-notes { margin-top: 10px; font-size: 9pt; padding: 6px 8px; border-left: 3px solid #a50f2a; background: #f6f7f9 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .ps-terms { margin-top: 10px; font-size: 8pt; color: #444; white-space: pre-line; }
+  .ps-sign { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 46px; font-size: 8.5pt; text-align: center; break-inside: avoid; }
+  .ps-line { border-top: 1px solid #333; margin-bottom: 4px; }
+  .ps-foot { margin-top: 18px; text-align: center; font-size: 7.5pt; color: #777; border-top: 1px solid #d7dae0; padding-top: 5px; }
+  .ps-watermark { position: absolute; top: 38%; left: 12%; font-size: 90pt; font-weight: 900; color: rgba(165, 15, 42, .12); transform: rotate(-24deg); pointer-events: none; z-index: 0; }
+}
+@media print {
+  .ps-items > tfoot { display: table-row-group; }
+  .ps-items:not(.ps-mini) th:nth-child(2) { width: 32%; }
+  .ps-items td:nth-child(3) { white-space: nowrap; }
+}
