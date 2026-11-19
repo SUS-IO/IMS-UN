@@ -27,7 +27,7 @@ function Login() {
       /* @__PURE__ */ jsx("div", { className: "chip", children: /* @__PURE__ */ jsx("img", { src: "img/logo.png", alt: "IMS" }) }),
       /* @__PURE__ */ jsxs("div", { children: [
         /* @__PURE__ */ jsx("h2", { children: "Every spare part, tracked to the rack." }),
-        /* @__PURE__ */ jsx("p", { children: "Live stock by MRP and GST, complete audit trail, and step-by-step reversals \u2014 built for automobile spare parts." }),
+        /* @__PURE__ */ jsx("p", { children: "Complete automobile spare parts software." }),
         /* @__PURE__ */ jsxs("div", { className: "login-points", children: [
           /* @__PURE__ */ jsxs("div", { children: [
             /* @__PURE__ */ jsx(Zap, {}),
