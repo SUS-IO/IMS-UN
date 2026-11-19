@@ -39,7 +39,7 @@ function Login() {
           ] }),
           /* @__PURE__ */ jsxs("div", { children: [
             /* @__PURE__ */ jsx(ShieldCheck, {}),
-            "Nothing is deleted: every change is timestamped with who did it"
+            "Fully Secured"
           ] })
         ] })
       ] }),
