@@ -52,7 +52,7 @@ function Login() {
       /* @__PURE__ */ jsxs("div", { className: "stack", children: [
         note && /* @__PURE__ */ jsx(Alert, { tone: "warn", icon: AlertTriangle, children: note }),
         err && /* @__PURE__ */ jsx(Alert, { tone: "danger", icon: AlertTriangle, children: err }),
-        /* @__PURE__ */ jsx(Field, { label: "User ID", children: /* @__PURE__ */ jsx("input", { className: "input", autoFocus: true, autoCapitalize: "none", autoComplete: "username", value: uid, onChange: (e) => setUid(e.target.value), required: true, placeholder: "e.g. ravi" }) }),
+        /* @__PURE__ */ jsx(Field, { label: "User ID", children: /* @__PURE__ */ jsx("input", { className: "input", autoFocus: true, autoCapitalize: "none", autoComplete: "username", value: uid, onChange: (e) => setUid(e.target.value), required: true, placeholder: ".." }) }),
         /* @__PURE__ */ jsx(Field, { label: "Password", children: /* @__PURE__ */ jsxs("div", { className: "pw-wrap", children: [
           /* @__PURE__ */ jsx("input", { className: "input", type: show ? "text" : "password", autoComplete: "current-password", value: pw, onChange: (e) => setPw(e.target.value), required: true, placeholder: "Your password" }),
           /* @__PURE__ */ jsx("button", { type: "button", onClick: () => setShow((s) => !s), "aria-label": show ? "Hide password" : "Show password", children: show ? /* @__PURE__ */ jsx(EyeOff, { size: 17 }) : /* @__PURE__ */ jsx(Eye, { size: 17 }) })
